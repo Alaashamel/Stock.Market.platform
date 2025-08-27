@@ -1,0 +1,439 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Headings */
+h1, h2, h3 {
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #222;
+}
+
+/* Forms */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input, select, textarea {
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 100%;
+  transition: border-color 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #4f46e5;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+}
+
+button {
+  padding: 12px 18px;
+  border: none;
+  background: #4f46e5;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+button:hover {
+  background: #4338ca;
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+th, td {
+  padding: 14px 16px;
+  border: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+th {
+  background: #f9fafb;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* Cards / boxes */
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+}
+
+/* TopNav */
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 12px 24px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #4f46e5;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.left-section h1 {
+  margin: 0;
+  cursor: pointer;
+  color: #4f46e5;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+  margin-left: 20px;
+}
+
+.nav-links button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #374151;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+.nav-links button:hover {
+  color: #4f46e5;
+  background: #f5f5f5;
+  transform: translateY(-2px);
+}
+
+.nav-links button:active {
+  background: #e5e7eb;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: nowrap;
+}
+
+.username {
+  font-weight: 500;
+  color: #374151;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.username-bold {
+  font-weight: 700;
+  color: #4f46e5;
+}
+
+.financial-info-single-line {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f8f9fa;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  white-space: nowrap;
+}
+
+.financial-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.financial-item .icon {
+  font-size: 16px;
+}
+
+.financial-item .label {
+  font-size: 12px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.financial-item .value {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.cash-value {
+  color: #4f46e5;
+}
+
+.positive {
+  color: #16a34a;
+}
+
+.negative {
+  color: #dc2626;
+}
+
+.percentage {
+  font-size: 11px;
+  margin-left: 2px;
+}
+
+.separator {
+  color: #e5e7eb;
+  margin: 0 4px;
+  font-weight: 300;
+}
+
+.logout-btn {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+.logout-btn:hover {
+  background-color: #dc2626;
+  transform: translateY(-2px);
+}
+
+/* Loading States */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  width: 100%;
+}
+
+.loading-text {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+  color: #6b7280;
+}
+
+.error-message {
+  color: #dc2626;
+  text-align: center;
+  padding: 20px;
+  background-color: #fef2f2;
+  border-radius: 8px;
+  margin: 20px 0;
+  border-left: 4px solid #dc2626;
+}
+
+/* Compact Styles */
+.compact {
+  padding: 15px;
+}
+
+.compact .card-header {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.compact .card-header h2 {
+  font-size: 1.2rem;
+  color: #374151;
+  margin: 0;
+  font-weight: 600;
+}
+
+.compact .form-group {
+  margin-bottom: 15px;
+}
+
+.compact .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.85rem;
+}
+
+.compact .form-group input {
+  padding: 10px 12px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+.compact .form-group input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .right-section {
+    gap: 10px;
+  }
+  
+  .financial-info-single-line {
+    padding: 6px 12px;
+    gap: 8px;
+  }
+  
+  .financial-item {
+    gap: 4px;
+  }
+  
+  .financial-item .label {
+    font-size: 11px;
+  }
+  
+  .financial-item .value {
+    font-size: 11px;
+  }
+  
+  .username {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .topnav {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+  
+  .left-section {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  
+  .nav-links {
+    margin-left: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .right-section {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+  
+  .financial-info-single-line {
+    order: -1;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 5px;
+  }
+  
+  .container {
+    padding: 15px;
+  }
+  
+  .compact {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .compact .form-group input {
+    padding: 8px 10px;
+    font-size: 0.8rem;
+  }
+}
+
+.content-visible {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.content-hidden {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* index.css - إضافة هذه الأنماط */
+.fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.content-visible {
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.content-hidden {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* تحسين أداء التحميل للجداول والبطاقات */
+table, .card, .company-card {
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.loading-content {
+  opacity: 0.7;
+  pointer-events: none;
+}
