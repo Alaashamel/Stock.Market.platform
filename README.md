@@ -1,5 +1,8 @@
 # React + Vite
 
+![License](https://img.shields.io/badge/license-MIT-blue.svg) ![Language](https://img.shields.io/badge/language-JavaScript-informational.svg) ![Last Commit](https://img.shields.io/github/last-commit/Alaashamel/Stock.Market.platform)
+
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
